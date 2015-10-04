@@ -1,0 +1,130 @@
+/**
+ * Site header
+ */
+header {
+    min-height: 3rem;
+}
+
+.social-media-strip {
+	display: block;
+	background-color: #f1f1f1;
+	min-height: 1.4rem;
+	
+	ul {
+		@include outer-container;
+		padding: 5px;
+		list-style-type: none;
+		height: 1rem;
+		li {
+			float: right;
+			text-indent: -9999px;
+			margin-right: 8px;
+		}
+		.fb , .insta, .behance {
+			@include size(0.7rem);
+		}
+		
+		.fb {
+			background: url(../img/fb.png) no-repeat center / contain;
+				
+		}
+		.insta {
+			background: url(../img/insta.png) no-repeat center / contain;
+		}
+		.behance {
+			background: url(../img/behance.png) no-repeat center / contain;	
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	img {
+		float: right;
+	}
+}
+
+.top-nav {
+	padding: 0.3rem 1rem 0.3rem 0;
+	@include outer-container;
+	position: relative;
+	.logo {
+		@include span-columns(2);
+		@include shift(1);
+		
+		@include media($mobile) {
+		  @include span-columns(12);
+		  @include shift(0);
+		  padding: 1em;
+		}
+	}
+	
+	ul {	
+		list-style-type: none;
+		@include span-columns(9);
+		transform: translateY(50%);
+		
+		@include media($mobile) {
+			@include outer-container;
+			//transform: translateY(0);	
+		}
+
+		li {
+			text-decoration: none;
+			text-transform: uppercase;
+			@include span-columns(2);
+			
+			a{
+				float: right;	
+				@include size(60%);
+				text-indent: -9999px;
+			}
+			
+			.about {
+				background: url(../img/about.png) no-repeat center/contain;
+
+			}
+			.about:hover{
+				background: url(../img/about_hover.png) no-repeat center/contain;				
+			}
+
+			.team {
+				background: url(../img/team.png) no-repeat center/contain;
+
+			}
+			.team:hover{
+				background: url(../img/team_hover.png) no-repeat center/contain;				
+			}
+			.services {
+				background: url(../img/services.png) no-repeat center/contain;
+
+			}
+			.services:hover{
+				background: url(../img/services_hover.png) no-repeat center/contain;				
+			}
+			.products {
+				background: url(../img/products.png) no-repeat center/contain;
+
+			}
+			.products:hover {
+				background: url(../img/products_hover.png) no-repeat center/contain;
+
+			}
+			.blog {
+				background: url(../img/blog.png) no-repeat center/contain;
+
+			}
+			.blog:hover{
+				background: url(../img/blog_hover.png) no-repeat center/contain;				
+			}
+			.contact {
+				background: url(../img/contact.png) no-repeat center/contain;
+
+			}
+			.contact:hover{
+				background: url(../img/contact_hover.png) no-repeat center/contain;				
+			}
+		}
+	}	
+}
