@@ -3,8 +3,8 @@ title: Karwak
 description: > # this means to ignore newlines until "baseurl:"
   Karwak is a environmently friendly products company committed to 
   sustainable lifestyle choices and practices.
-baseurl: /newkarwak/ # the subpath of your site, e.g. /blog/
-url: http://guttikar.github.io # the base hostname & protocol for your site
+baseurl: "/newkarwak/" # the subpath of your site, e.g. /blog/
+url: "http://guttikar.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
