@@ -1,4 +1,0 @@
----
-layout: default
----
-# Home of Karwak #
