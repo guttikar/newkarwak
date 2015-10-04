@@ -52,12 +52,23 @@ header {
 	.logo {
 		@include span-columns(2);
 		@include shift(1);
+		
+		@include media($mobile) {
+		  @include span-columns(12);
+		  @include shift(0);
+		  padding: 1em;
+		}
 	}
 	
 	ul {	
 		list-style-type: none;
 		@include span-columns(9);
 		transform: translateY(50%);
+		
+		@include media($mobile) {
+			@include outer-container;
+			//transform: translateY(0);	
+		}
 
 		li {
 			text-decoration: none;
