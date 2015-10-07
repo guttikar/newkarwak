@@ -1,0 +1,149 @@
+.home-about {
+	padding-top: 2.5rem;
+	@include outer-container;
+
+	img {
+		@include span-columns(4);
+		@include shift(0.5);
+	}
+
+	.description {
+		@include span-columns(6);
+		@include shift(0.5);
+	}
+
+	.materials-container{
+		margin-top: $spacing-unit;
+		@include span-columns(6);
+		@include shift(0.5);
+		
+		h3 {
+			color: #faba18;
+			padding-bottom: $spacing-unit/2;
+		}
+
+		.materials {
+			padding-left: $spacing-unit/2;
+			@include span-columns(2 of 6);	
+			p {
+				padding: 0.5em 0.125em;
+			}
+		}
+	}
+
+	@include media($tablet) {
+	
+		.materials-container {
+			@include span-columns(10 of 12);
+			@include shift(1);
+
+			.materials {
+				@include span-columns(3.33 of 10);
+			}
+		}
+	}
+
+	@include media($mobile) {
+	
+		img {
+			@include span-columns(10 of 12);
+			@include shift(1);	
+		}
+
+		.description {
+			@include span-columns(10 of 12);
+			@include shift(1);
+			padding-top: $spacing-unit/2;
+		}
+
+	}
+}
+
+.process {
+	@include outer-container;
+	padding: $spacing-unit * 2;
+	h2 {
+		padding: $spacing-unit;
+	}
+}
+
+.environment {
+	@include outer-container;
+
+	h3 {
+		padding: 2*$spacing-unit 0;
+	}
+	.saved {
+		@include row(table);
+
+		.achievement {
+			@include span-columns(3 of 12);
+			vertical-align: bottom;
+			text-align: center;
+			img {
+		
+				// align: center;
+			}	
+		}
+	}
+
+	.number1, .number2, .number3, .number4 {
+		font-size: 3rem;
+		padding-top: $spacing-unit/4;
+		// vertical-align: bottom;
+	}
+
+	.slogan {
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: 300;
+		// vertical-align: bottom;
+	}
+	
+}
+
+.yellow-band {
+	@include row();
+	background-color: $brand-color;
+	padding: $spacing-unit;
+	margin-top: $spacing-unit;
+
+
+	.products-link {
+		border: 1px solid red;
+		
+		@include outer-container;
+		div {
+			@include shift(1);	
+			text-transform: uppercase;
+			font-size: 1.5em;
+			font-weight: 200;
+			color: #333;
+
+		}
+
+		a {
+			@include span-columns(4);
+			@include shift(-1);
+			border: 1px solid blue;
+			float: right;
+
+			display: block;
+			// vertical-align: center;
+			height: 4rem;
+
+			background: url(/img/home/look.png) no-repeat;
+			background-size: contain;
+
+			text-decoration: none;
+			text-transform: uppercase;
+			text-indent: -9999px;
+
+		}
+
+		a:hover {
+			background: url(/img/home/look_hover.png) no-repeat;
+			background-size: contain;
+		}
+	}
+}
