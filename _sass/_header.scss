@@ -12,32 +12,54 @@ header {
 	
 	ul {
 		@include outer-container;
+		// @include shift(0);
 		padding: 5px;
 		list-style-type: none;
 		height: 1rem;
+		
+		@include media($mobile){
+			display: none;
+		}
+
+
 		li {
 			float: right;
-			text-indent: -9999px;
-			margin-right: 8px;
+			margin-right: 0.5rem;
 		}
 		.fb , .insta, .behance {
-			@include size(0.7rem);
+			@include size(0.9rem);
+			// border: 1px solid red;
+			height: 0.9rem;
 		}
 		
+		a {
+			float: right;
+			text-indent: -9999px;
+			width: 0.9rem;
+		}
+
 		.fb {
 			background: url(../img/fb.png) no-repeat center / contain;
+				
+		}
+		.fb:hover {
+			background: url(../img/fb_hover.png) no-repeat center / contain;
 				
 		}
 		.insta {
 			background: url(../img/insta.png) no-repeat center / contain;
 		}
+		.insta:hover {
+			background: url(../img/insta_hover.png) no-repeat center / contain;
+		}
 		.behance {
 			background: url(../img/behance.png) no-repeat center / contain;	
 		}
-
-		a {
-			text-decoration: none;
+		.behance:hover {
+			background: url(../img/behance_hover.png) no-repeat center / contain;	
 		}
+
+		
 	}
 
 	img {
@@ -49,38 +71,78 @@ header {
 	padding: 0.3rem 1rem 0.3rem 0;
 	@include outer-container;
 	position: relative;
+
 	.logo {
 		@include span-columns(2);
-		@include shift(1);
-		
-		@include media($mobile) {
-		  @include span-columns(12);
-		  @include shift(0);
-		  padding: 1em;
+		@include shift(0.5);
+
+		@include media($tablet) {
+		  // @include span-columns(5);
+		  // @include shift(0);
+		  width: 200px;
 		}
 	}
 	
+	.burger {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		display: none;
+		background: url(../img/burger-cross.svg) no-repeat 0 0;
+		background-color: #fff;
+		@include size(20px);
+		border: 0;		
+		overflow: hidden;
+		z-index: 99999;
+		cursor: pointer;
+		padding-right: 10px;
+		
+		@include media($tablet) {
+			display: block;
+		}
+	}
+
 	ul {	
 		list-style-type: none;
 		@include span-columns(9);
 		transform: translateY(50%);
-		
-		@include media($mobile) {
-			@include outer-container;
-			//transform: translateY(0);	
-		}
+		float: right;
 
+		@include media($tablet) {
+			transform: translateY(0);
+			float: none;
+		}
+		
 		li {
 			text-decoration: none;
 			text-transform: uppercase;
 			@include span-columns(2);
-			
+
+			@include media($tablet) {
+				display: block;
+				width: 100%;
+				// clear: both;
+				// margin: 10px;
+				// padding-right: 20px;
+				// border-bottom: 1px solid #ccc;
+			}
+
 			a{
 				float: right;	
 				@include size(60%);
 				text-indent: -9999px;
 			}
-			
+			.panel-logo {
+				display: none;
+				width: 0;
+				background: url(../img/karwak_logo.png) no-repeat center/contain;	
+					
+				@include media($tablet) {
+					display: block;
+					@include size(90%);
+				}
+			}
+
 			.about {
 				background: url(../img/about.png) no-repeat center/contain;
 
@@ -126,5 +188,6 @@ header {
 				background: url(../img/contact_hover.png) no-repeat center/contain;				
 			}
 		}
+
 	}	
 }
