@@ -1,2 +1,5 @@
 .sass-cache
 _site
+*.lnk
+_sass/neat/settings/_visual-grid.scss
+
