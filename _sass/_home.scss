@@ -71,7 +71,8 @@
 	@include outer-container;
 
 	h3 {
-		padding: 2*$spacing-unit 0;
+		padding: 2*$spacing-unit 0 2*$spacing-unit $spacing-unit;
+
 	}
 	.saved {
 		@include row(table);
@@ -102,35 +103,49 @@
 	
 }
 
+
+@include media($mobile) {
+	.saved {
+		display: block;
+		float: left;
+		.achivement {
+			display: inline-block;
+			@include span-columns(6 of 12);
+		}
+	}    						
+}
+
 .yellow-band {
-	@include row();
+	// @include row();
 	background-color: $brand-color;
 	padding: $spacing-unit;
 	margin-top: $spacing-unit;
 
 
 	.products-link {
-		border: 1px solid red;
-		
+		// border: 1px solid red;
+		padding: 0;
 		@include outer-container;
 		div {
 			@include shift(1);	
+			float: left;
 			text-transform: uppercase;
 			font-size: 1.5em;
 			font-weight: 200;
 			color: #333;
-
+			// border: 1px solid green;	
+			padding: 0.25em 0;
 		}
 
 		a {
-			@include span-columns(4);
-			@include shift(-1);
-			border: 1px solid blue;
-			float: right;
+			@include span-columns(3);
+			@include shift(1);
+			// border: 1px solid blue;
+			float: left;
 
 			display: block;
 			// vertical-align: center;
-			height: 4rem;
+			height: 2.5625em;
 
 			background: url(../img/home/look.png) no-repeat;
 			background-size: contain;
