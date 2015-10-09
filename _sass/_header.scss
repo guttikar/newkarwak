@@ -71,7 +71,7 @@ header {
 	padding: 0.3rem 1rem 0.3rem 0;
 	@include outer-container;
 	position: relative;
-
+	// border: 1px solid green; 
 	.logo {
 		@include span-columns(2);
 		@include shift(0.5);
@@ -105,12 +105,18 @@ header {
 	ul {	
 		list-style-type: none;
 		@include span-columns(9);
-		transform: translateY(50%);
 		float: right;
-
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 1em;
+		transform: translateY(-50%);
+		// border: 1px solid red;
+		overflow: hidden; 
 		@include media($tablet) {
-			transform: translateY(0);
-			float: none;
+			right: 2em;
+		// 	// transform: translateY(0);
+		// 	// float: none;
 		}
 		
 		li {
