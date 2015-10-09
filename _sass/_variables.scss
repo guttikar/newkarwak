@@ -1,5 +1,5 @@
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'PT sans', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -17,6 +17,6 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    960px;
 
-$mobile: new-breakpoint(max-width 500px 6);
-$tablet: new-breakpoint(max-width 800px 12);
+$mobile: new-breakpoint(max-width 30em 6);
+$tablet: new-breakpoint(max-width 50em 12);
 // $desktop: new-breakpoint(min-width 800px 12);
