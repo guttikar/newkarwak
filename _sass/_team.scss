@@ -1,0 +1,15 @@
+.team, .support {
+	@include outer-container;
+	display: flex;
+	padding: 1em;
+	> h1 {
+		font-weight: 300; 
+	}
+}
+
+.member {
+	width: 100%;
+	img {
+		width: 20em; 
+	}
+}
