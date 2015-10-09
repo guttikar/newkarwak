@@ -13,3 +13,4 @@ kramdown:
 
 # Ignore files and folders
 exclude: ['README.md']
+permalink: pretty
