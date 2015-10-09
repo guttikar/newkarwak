@@ -1,6 +1,6 @@
 .sliding-panel-content {  
     @include media($tablet) {
-    $action-color: #477DCA !default;
+    $action-color: #fff !default;
     $dark-gray: #777 !default;
     $sliding-panel-border-color: #fefefe;
     $sliding-panel-background: darken($sliding-panel-border-color, 5%);
