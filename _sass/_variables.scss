@@ -17,6 +17,6 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    960px;
 
-$mobile: new-breakpoint(max-width 30em 6);
+$mobile: new-breakpoint(max-width 35em 6);
 $tablet: new-breakpoint(max-width 50em 12);
 // $desktop: new-breakpoint(min-width 800px 12);
