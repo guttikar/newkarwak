@@ -12,7 +12,7 @@
 		@include shift(0.5);
 	}
 
-	.materials-container{
+	.materials-container {
 		margin-top: $spacing-unit;
 		@include span-columns(6);
 		@include shift(0.5);
@@ -72,93 +72,148 @@
 
 	h3 {
 		padding: 2*$spacing-unit 0 2*$spacing-unit $spacing-unit;
-
-	}
-	.saved {
-		@include row(table);
-
-		.achievement {
-			@include span-columns(3 of 12);
-			vertical-align: bottom;
-			text-align: center;
-			img {
-		
-				// align: center;
-			}	
-		}
-	}
-
-	.number1, .number2, .number3, .number4 {
-		font-size: 3rem;
-		padding-top: $spacing-unit/4;
-		// vertical-align: bottom;
-	}
-
-	.slogan {
-		text-transform: uppercase;
-		font-size: 1rem;
-		font-weight: 300;
-		// vertical-align: bottom;
 	}
 	
 }
 
+.saved {
+	// @include row(table);
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.achievement {
+	text-align: center; 
+	// @include span-columns(3 of 12);
+	// position: absolute;
+	// bottom: 0.5em;
+	width: 25%;
+}
+
+.number1, .number2, .number3, .number4 {
+	font-size: 3em;
+	padding-top: 0.75rem;
+	// vertical-align: bottom;
+}
+
+.slogan {
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 300;
+	// vertical-align: bottom;
+}
+
+@media only screen and (max-width: 45rem) {
+	
+	.saved {
+		justify-content: center;
+	}
+	.achievement {
+
+		width: 50%;
+		padding-bottom: 2em;
+	} 
+	
+}
 
 @include media($mobile) {
-	.saved {
-		display: block;
-		float: left;
-		.achivement {
-			display: inline-block;
-			@include span-columns(6 of 12);
-		}
-	}    						
+	.achievement {
+		width: 100%;
+	}		
 }
 
 .yellow-band {
-	// @include row();
 	background-color: $brand-color;
-	padding: $spacing-unit;
+	padding: $spacing-unit 0;
 	margin-top: $spacing-unit;
+}
 
+.earth-container{
+	@include outer-container;
+}
 
-	.products-link {
-		// border: 1px solid red;
-		padding: 0;
-		@include outer-container;
-		div {
-			@include shift(1);	
-			float: left;
-			text-transform: uppercase;
-			font-size: 1.5em;
-			font-weight: 200;
-			color: #333;
-			// border: 1px solid green;	
-			padding: 0.25em 0;
-		}
-
-		a {
-			@include span-columns(3);
-			@include shift(1);
-			// border: 1px solid blue;
-			float: left;
-
-			display: block;
-			// vertical-align: center;
-			height: 2.5625em;
-
-			background: url(../img/home/look.png) no-repeat;
-			background-size: contain;
-
-			text-decoration: none;
-			text-transform: uppercase;
-			text-indent: -9999px;
-
-		}
-
-		a:hover {
-			background: url(../img/home/look_hover.png) no-repeat;
-			background-size: contain;
-		}
+.products-link  {
+	display: flex;
+	width: 100%;
+	-webkit-flex-flow: column wrap;
+  	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	// border: 1px solid green; 
+	
+		
+	div {
+		// @include shift(1);
+		font-weight: 200;
+		font-size: 1.375em;
+		text-transform: uppercase;
+		color: #333;
+		// border: 1px solid blue;	
+		// padding: 0.25em 0;
+		text-align: center;
+		// flex-grow: 2;
+		// max-height: 1.5rem;
+		width: 22em;
 	}
+
+	a {
+		// padding: 1rem;
+		background: url(../img/home/look.png) no-repeat;
+		background-size: contain;	
+		font-size: 1.5em;	
+		padding: .375rem;
+		text-decoration: none;
+		text-indent: -9999px;
+		// border: 1px solid red; 
+		// flex-grow: 1;
+		width: 12em;
+	}
+
+	a:hover {
+		background: url(../img/home/look_hover.png) no-repeat;
+		background-size: contain;
+	}
+}
+
+@include media($tablet) {
+	.products-link {
+	// -webkit-flex-flow: column wrap;
+ //    flex-flow: column wrap;
+ //    justify-content: center;
+	// align-items: space-around;   
+      a {
+        margin: 1em 0.25em 0 0.25em;
+      }
+	}
+}
+
+.our-clients {
+	background-color: #dedede;	
+	padding: 1em 0;
+	
+	> h3 {
+		@include outer-container;
+		padding: 0 3em;
+		color: #000;
+	}
+}
+
+.clients-logos {
+	@include outer-container;
+	display: flex;
+	-webkit-flex-flow: row wrap; 
+	 -ms-flex-flow: row wrap; 
+	 flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+
+	> img {
+		width: 12em;
+		padding:2em;
+	}  
 }
