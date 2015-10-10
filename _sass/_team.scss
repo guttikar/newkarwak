@@ -76,9 +76,12 @@
 }
 
 @include media($mobile) {
-	.employees > h1 {
-		padding-left: 8vw;
-	}	
+	.employees {
+		padding-left: 0;
+		> h1 {
+			padding-left: 8vw;
+		}	
+	}
 	.employee > img {
 		width: 80%;
 	}
