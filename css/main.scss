@@ -1,7 +1,7 @@
 ---
 ---
 
-
+@import "reset";
 @import "plugins"; 
 @import "variables";
 @import "base";
@@ -9,12 +9,11 @@
 @import "typography";
 
 @import "header";
-
-@import "home";
-
-@import "cover_slider";
-
 @import "offscreen_nav";
 @import "footer";
 
-@import "team";
+
+// @import "home";
+// @import "cover_slider";
+// @import "team";
+@import "products";
