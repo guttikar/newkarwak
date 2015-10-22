@@ -1,9 +1,9 @@
 # Site settings
 title: Karwak
 description: > # this means to ignore newlines until "baseurl:"
-  Karwak is a environmently friendly products company committed to 
-  sustainable lifestyle choices and practices.
-baseurl: "/newkarwak" # the subpath of your site, e.g. /blog/
+  Cymour is the best place in the world for 
+  anything related to cycling!
+baseurl: "/cymour" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 # Build settings

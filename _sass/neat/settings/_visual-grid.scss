@@ -4,13 +4,13 @@
 ///
 /// @type Bool
 
-$visual-grid: false !default;
+$visual-grid: true !default;
 
 /// Sets the visual grid color. Set with `!global` flag.
 ///
 /// @type Color
 
-$visual-grid-color: lighten(#123456, 40%) !default;
+$visual-grid-color: lighten(#2468ac, 40%) !default;
 
 /// Sets the `z-index` property of the visual grid. Can be `back` (behind content) or `front` (in front of content). Set with `!global` flag.
 ///
@@ -22,6 +22,6 @@ $visual-grid-index: back !default;
 ///
 /// @type Number (unitless)
 
-$visual-grid-opacity: 0.2 !default;
+$visual-grid-opacity: 0.1 !default;
 
 $visual-grid-breakpoints: () !default;
